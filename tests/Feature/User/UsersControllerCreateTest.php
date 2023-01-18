@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\User;
+namespace MG\User\Tests\Feature\User;
 
 use Illuminate\Support\Arr;
 

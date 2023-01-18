@@ -1,20 +1,39 @@
 <?php
 
-namespace Tests;
+namespace MG\User\Tests;
 
 use App\Models\User;
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use MG\User\UserServiceProvider;
 
-abstract class TestCase extends BaseTestCase
+abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
-    use CreatesApplication;
-
+    protected $enablesPackageDiscoveries = true;
+    
     protected array $data = [
         'name' => 'New MG',
         'email' => 'new-mg@dashboard.com',
         'password' => 'mgamal92',
         'password_confirmation' => 'mgamal92',
     ];
+
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        $this->artisan('migrate', ['--database' => 'testbench'])->run();
+    }
+
+    protected function getPackageProviders($app)
+    {
+        return [
+            UserServiceProvider::class,
+        ];
+    }
+
+    public function ignorePackageDiscoveriesFrom()
+    {
+        return [];
+    }
 
     protected function createUser(): User
     {

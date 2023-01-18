@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests\Unit\Services;
+namespace MG\User\Tests\Unit\Services;
 
 use MG\User\Services\UserService;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Collection;
-use Tests\TestCase;
+use MG\User\Tests\TestCase;
 
 class UserServiceTest extends TestCase
 {

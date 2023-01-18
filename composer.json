@@ -9,6 +9,9 @@
     }
   ],
   "scripts": {
+    "post-autoload-dump": [
+      "@php vendor/bin/testbench package:discover --ansi"
+    ],
     "test": "php artisan test",
     "check-style": "vendor/bin/php-cs-fixer fix src/ --dry-run --allow-risky=yes --format=txt --verbose"
   },
@@ -19,7 +22,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\": "tests/"
+      "MG\\User\\Tests\\": "tests/"
     }
   },
   "require": {
@@ -29,7 +32,7 @@
     "laravel/framework": ">=6.20"
   },
   "require-dev": {
-    "orchestra/testbench": "^7.17",
+    "orchestra/testbench": "^7.19",
     "phpunit/phpunit": "^9.5",
     "roave/security-advisories": "dev-latest"
   },

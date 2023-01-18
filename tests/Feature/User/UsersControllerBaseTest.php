@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Feature\User;
+namespace MG\User\Tests\Feature\User;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
+use MG\User\Tests\TestCase;
 
 abstract class UsersControllerBaseTest extends TestCase
 {
