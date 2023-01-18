@@ -3,7 +3,7 @@
 
 namespace MG\User\Controllers;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 use MG\User\Requests\UserRequest;
 use MG\User\Resources\UserResource;
 use MG\User\Services\UserService;

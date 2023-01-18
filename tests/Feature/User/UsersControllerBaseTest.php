@@ -10,5 +10,5 @@ abstract class UsersControllerBaseTest extends TestCase
 {
     use RefreshDatabase;
 
-    const REQ_URI = '/api/users';
+    const REQ_URI = '/users';
 }

@@ -8,8 +8,9 @@ class UsersControllerCreateTest extends UsersControllerBaseTest
 {
     public function test_creating_user_with_wrong_request()
     {
-        $res = $this->postJson(self::REQ_URI, Arr::except($this->data, ['type']));
-        $res->assertJsonValidationErrorFor('type');
+        $res = $this->postJson(self::REQ_URI, Arr::except($this->data, ['name']));
+
+        $res->assertJsonValidationErrorFor('name');
 
         $this->assertDatabaseMissing('users', [
             'name' => $this->data['name'],
@@ -27,8 +28,6 @@ class UsersControllerCreateTest extends UsersControllerBaseTest
                     'name',
                     'username',
                     'email',
-                    'type',
-                    'profile_picture',
                 ]
             ]
         );

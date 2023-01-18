@@ -12,7 +12,7 @@ class UsersControllerDeleteTest extends UsersControllerBaseTest
         $res->assertOk();
 
         $this->assertModelMissing($user);
-        $this->assertDatabaseMissing('user', [
+        $this->assertDatabaseMissing('users', [
             'name' => $user->name,
         ]);
     }

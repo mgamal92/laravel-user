@@ -17,7 +17,6 @@ class UsersControllerShowTest extends UsersControllerBaseTest
                     'name',
                     'username',
                     'email',
-                    'profile_picture',
                 ]
             ]
         );

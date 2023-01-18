@@ -22,3 +22,8 @@ and much more will come!
 ## Usage
 
 Will be added soon!
+
+## Testing
+```bash
+composer test
+```

@@ -9,7 +9,7 @@
     }
   ],
   "scripts": {
-    "test": "phpunit",
+    "test": "vendor/bin/phpunit --testdox",
     "check-style": "vendor/bin/php-cs-fixer fix src/ --dry-run --allow-risky=yes --format=txt --verbose"
   },
   "autoload": {

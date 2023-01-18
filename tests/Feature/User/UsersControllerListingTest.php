@@ -16,9 +16,7 @@ class UsersControllerListingTest extends UsersControllerBaseTest
                     '*' => [
                         'id',
                         'name',
-                        'username',
                         'email',
-                        'profile_picture',
                     ]
                 ]
             ]

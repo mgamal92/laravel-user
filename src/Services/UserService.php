@@ -3,9 +3,9 @@
 
 namespace MG\User\Services;
 
-use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+use MG\User\User;
 
 class UserService
 {

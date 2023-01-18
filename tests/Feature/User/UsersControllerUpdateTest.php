@@ -9,11 +9,11 @@ class UsersControllerUpdateTest extends UsersControllerBaseTest
     public function test_updating_user_with_wrong_request()
     {
         $user = $this->createUser();
-        $res = $this->putJson(self::REQ_URI . '/' . $user->id, Arr::except($this->data, ['type']));
-        $res->assertJsonValidationErrorFor('type');
+        $res = $this->putJson(self::REQ_URI . '/' . $user->id, Arr::except($this->data, ['name']));
+        $res->assertJsonValidationErrorFor('name');
         $res->assertJsonStructure([
             'message',
-            'errors' => ['type'],
+            'errors' => ['name'],
         ]);
         $this->assertDatabaseMissing('users', [
             'name' => $this->data['name'],
