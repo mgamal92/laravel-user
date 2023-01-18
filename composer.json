@@ -1,0 +1,47 @@
+{
+  "name": "mgamal/laravel-user",
+  "description": "Ready-to-use Module for user system.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohamed Gamal",
+      "email": "mg.dev1992@icloud.com"
+    }
+  ],
+  "scripts": {
+    "test": "php artisan test",
+    "check-style": "vendor/bin/php-cs-fixer fix src/ --dry-run --allow-risky=yes --format=txt --verbose"
+  },
+  "autoload": {
+    "psr-4": {
+      "MG\\User\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "friendsofphp/php-cs-fixer": "^3.4",
+    "guzzlehttp/guzzle": "^7.4",
+    "laravel/framework": ">=6.20"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^7.17",
+    "phpunit/phpunit": "^9.5",
+    "roave/security-advisories": "dev-latest"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MG\\User\\UserServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {}
+  }
+}
