@@ -12,18 +12,11 @@ class UserServiceProvider extends ServiceProvider
     public function boot()
     {
         //@TODO: make routes configurable
-        $this->loadRoutesFrom(__DIR__.'/../routes/api.php');
-
-//        $this->publishes([
-//            // config file.
-//            'config/laravel-user.php' => config_path('laravel-user.php'),
-//        ], 'config');
+        $this->loadRoutesFrom('routes/api.php');
     }
 
     public function register()
     {
-//        $this->mergeConfigFrom('config/laravel-user.php', 'laravel-user');
-
         $this->app->singleton('laravel-user', function () {
             return new User();
         });

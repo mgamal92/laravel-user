@@ -9,10 +9,7 @@
     }
   ],
   "scripts": {
-    "post-autoload-dump": [
-      "@php vendor/bin/testbench package:discover --ansi"
-    ],
-    "test": "php artisan test",
+    "test": "phpunit",
     "check-style": "vendor/bin/php-cs-fixer fix src/ --dry-run --allow-risky=yes --format=txt --verbose"
   },
   "autoload": {

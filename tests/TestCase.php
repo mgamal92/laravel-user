@@ -7,8 +7,6 @@ use MG\User\UserServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
-    protected $enablesPackageDiscoveries = true;
-    
     protected array $data = [
         'name' => 'New MG',
         'email' => 'new-mg@dashboard.com',
@@ -19,8 +17,6 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     public function setUp(): void
     {
         parent::setUp();
-
-        $this->artisan('migrate', ['--database' => 'testbench'])->run();
     }
 
     protected function getPackageProviders($app)
@@ -28,11 +24,6 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
         return [
             UserServiceProvider::class,
         ];
-    }
-
-    public function ignorePackageDiscoveriesFrom()
-    {
-        return [];
     }
 
     protected function createUser(): User
