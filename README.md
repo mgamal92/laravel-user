@@ -1,6 +1,6 @@
 # Laravel User
 
-It's so boring for us - as a developer - to create user module repeatedly in each system we create. That's why I created this package to save more time and effort.
+It's so boring for me - as a developer - to create user module repeatedly in each system we create. That's why I created this package to save more time and effort.
 
 ## Installation
 
